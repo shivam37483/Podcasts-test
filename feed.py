@@ -28,7 +28,7 @@ with open('feed.yaml', 'r') as file:
 
     for item in yaml_data['item']:
         item_element = xml_tree.SubElement(channel_element, 'item')
-
+ 
         xml_tree.SubElement(item_element, 'title').text = item['title']
         xml_tree.SubElement(item_element, 'itunes:author').text = yaml_data['author']
         xml_tree.SubElement(item_element, 'description').text = item['description']
